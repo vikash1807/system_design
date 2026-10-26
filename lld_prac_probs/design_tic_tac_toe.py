@@ -169,7 +169,7 @@ class Game:
     def make_move(self, row : int, col : int) -> None:
         # check game is over or not
         if self._status != GameStatus.IN_PROGRESS:
-            print(f"Game is already over! Winner is {self._status.value}")
+            print(f"Game is already over! Winner is {self.winner}")
             return 
         
         # validate the move
@@ -221,7 +221,7 @@ def main():
     game.make_move(1, 0)  # O at (1,0)
     game.make_move(1, 2)  # O at (1,0)
     game.make_move(2, 0)  # O at (1,0)
-    # game.make_move(0, 2)  # O at (1,0)
+    game.make_move(0, 2)  # O at (1,0)
     # game.make_move(2,1)  # O at (1,0)
 
     game.print_board()
